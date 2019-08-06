@@ -219,7 +219,7 @@ For:
 
 2. Verify the installs
 
-```terminal
+```console
 $ sudo apt-get update -y
 ``
 

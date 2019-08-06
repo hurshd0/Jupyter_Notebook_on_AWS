@@ -25,12 +25,32 @@ You should now be on **AWS Management Console**, as of now it should look like t
 
 Goal here is to create a safe space to launch our Jupyter Notebook Server, to do so, we will create a our Virtual Private Cloud (VPC) where we will launch the EC2 instance (i.e. Virtual Machine).
 
+Our AWS Architecture should look something like this:
+
+
+
 Since, there is no cost for creating VPCs, you can create each for your project or deploying application.
 
 1. Before we start note your **AWS Region** in top-right, mine is `Ohio`, yours could be any one of the following, if you want to change, stick with the closest one.
 
 ![](https://i.imgur.com/lNkc2I4.png)
 
-2. 
+2. Search for `VPC` in **Find Services** search box:
+
+![](https://i.imgur.com/m0bOolS.png)
+
+It should take you to something like this:
+
+![](https://i.imgur.com/VUyU6MY.png)
+
+3. Easiest way from here on is clicking on `Launch VPC Wizard` blue button, that will take you to:
+
+Step 1: Selecting a VPC Configuration, where you would click on the blue `Select` button, since we only need a single EC2 instance that is publicly accessible.
+
+![](https://i.imgur.com/hsVm5Tw.png)
+
+Selecting it, would create a Public Subnet where instances can have inbound connection from the outside world.
+
+
 
 

@@ -151,6 +151,6 @@ sudo apt autoremove -y
 
 - Step 6: Configure Security Group
 
-:rotating_light: :warning: ** PAY ATTENTION TO THIS STEP ** :warning: :rotating_light:
+:rotating_light: :warning: **PAY ATTENTION TO THIS STEP** :warning: :rotating_light:
 
 

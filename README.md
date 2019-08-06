@@ -45,10 +45,23 @@ It should take you to something like this:
 
 ![](https://i.imgur.com/VUyU6MY.png)
 
-3. Easiest way from here on is clicking on `Launch VPC Wizard` blue button, that will take you to:
+3. Easiest way from here on is clicking on `Launch VPC Wizard` button, that will take you to:
 
 Step 1: Selecting a VPC Configuration, where you would click on the blue `Select` button, since we only need a single EC2 instance that is publicly accessible.
 
 ![](https://i.imgur.com/hsVm5Tw.png)
 
-Selecting it, would create a Public Subnet where instances can have inbound connection from the outside world.
+> Selecting it, would create a Public Subnet where instances can have inbound connection from the outside world which will allow us to SSH into the servers and access website using HTTP/HTTPS protocols, along with outbound internet access needed to update and download repository/packages for us.
+
+Step 2: VPC with a Single Public Subnet
+
+> Everything should be left default values, don't change anything expect giving it a VPC name, `Jupyter VPC`.
+
+![](https://i.imgur.com/KJBAe1N.png)
+
+After naming the `VPC`, click on `Create VPC` button. After it sucessfully creates the VPC, you should see a confirmation, in green text, and information to `Launch an Instance into Your Subnet`.
+
+![](https://i.imgur.com/VtxX8PU.png)
+
+
+Step 3: 

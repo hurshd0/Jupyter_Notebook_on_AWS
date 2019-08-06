@@ -113,7 +113,7 @@ https://aws.amazon.com/ec2/pricing/on-demand/
 
 Copy paste below commands 
 
-```linux
+```bash
 #!/bin/bash
 curl https://repogen.simplylinux.ch/txt/bionic/sources_f2be9cfad2f632b6f9d6fc0eea6ad4a35d70929d.txt | sudo tee /etc/apt/sources.list
 sudo apt-get update -y

@@ -277,6 +277,9 @@ Add following lines of code underneath the `# Configuration file for jupyter-not
 ```console
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get install certbot -y
+sudo ufw allow 80
+sudo ufw allow 443
+sudo ufw allow 9999
 ```
 
 https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication

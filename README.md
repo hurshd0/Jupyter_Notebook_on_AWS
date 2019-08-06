@@ -217,9 +217,13 @@ For:
 
   Follow the **Prerequisites** part of this guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
 
-2. Verify the installs
+2. Install Anaconda3 Linux
 
+- Step 1. Verify the installs and upgarde the packages
 ```bash
-$ sudo apt-get update -y
+$ sudo apt-get upgrade -y
 ```
+
+- Step 2. Run following commands to isntall **Anaconda**
+
 

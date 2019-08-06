@@ -1,2 +1,20 @@
-# Jupyter_Notebook_on_AWS
-Learn how to deploy Jupyter Notebook server on AWS EC2 that is scalable and accessible via VSCode Remote Extension
+#  :cloud: Create scalable Jupyter Notebook on Cloud :orange_book:
+
+## Pre-requisites:
+
+1. Create [AWS Account](https://aws.amazon.com/)
+
+> NOTE: If you are student Sign-Up through [AWS Educate](https://aws.amazon.com/education/awseducate/)
+
+2. If on Windows, install ![[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)](https://upload.wikimedia.org/wikipedia/commons/b/b6/PuTTY_icon_128px.png)
+
+
+Learn how to deploy Jupyter Notebook server on AWS EC2 that is scalable and accessible via VSCode Remote Extension.
+
+1. Start with registering for AWS account
+
+2. Navigate to AWS EC2 console.
+
+![](
+
+

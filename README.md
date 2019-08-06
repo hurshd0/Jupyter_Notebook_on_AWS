@@ -232,6 +232,19 @@ For more information on Anaconda Environments:
 
 [A Guide to Conda Environments](https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533)
 
+- Step 3. :orange_book: Generate Jupyter Notebooks Config file :page_facing_up:
 
+In the shell run the following command:
 
-- Step 3. 
+`jupyter notebook --generate-config`
+
+Which will generate a configuartion file we need to custom deploy and run our jupyter notebook server. If it fail's, re-try the installations, as you might not have done correctly.
+
+Config. file should be loated under:
+
+`/home/ubuntu/.jupyter`
+
+do, `ls -l` to locate:
+
+`jupyter_notebook_config.py`
+

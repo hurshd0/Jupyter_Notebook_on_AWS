@@ -153,4 +153,20 @@ sudo apt autoremove -y
 
 :rotating_light: :warning: **PAY ATTENTION TO THIS STEP** :warning: :rotating_light:
 
+We will be creating a **new** security group, so make sure you follow below settings:
+
+  - Assign a security group: `Create a new security group` radio button selected
+  - Security group name: `jupyter-ec2-sg`
+  - Add Rule: `HTTP` and `HTTPS`
+  - Source: `Anywhere` for all the rows
+ 
+ Exactly like this:
+ 
+ ![](https://i.imgur.com/uamTqUq.png)
+ 
+ Once, you have configured exactly like have, move onto next step, which is **Reviewing and Launching** our EC2 instance.
+ 
+ :point_right: Click `Review and Launch` button
+ 
+ 
 

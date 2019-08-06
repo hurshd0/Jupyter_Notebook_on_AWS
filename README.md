@@ -198,13 +198,12 @@ SSH means "secure shell", where you can remotely connect your server and type co
 For: 
   - Mac / Linux users: use Terminal
 	
-    :point_right: Locate your ec2 ip in `Description` tab under `Public DNS(IPv4)`.
+      - Step 1. Locate your ec2 ip in `Description` tab under `Public DNS(IPv4)`.
     ![](https://i.imgur.com/e2ox50X.png)
-    
-    :point_right: 
-      - Denotes: 
-        -  <your_ec2_ip>
-        -  <your_private_key>.pem
+     - Step 2. Note
+       - Denotes: 
+         -  `<your_ec2_ip>`
+         -  `<your_private_key>.pem`
     
     
 	

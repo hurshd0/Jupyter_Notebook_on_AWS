@@ -106,12 +106,12 @@ https://aws.amazon.com/ec2/pricing/on-demand/
 
   - a. Under `Network` drop-down box, select our `Jupyter VPC`
   - b. Enable `Auto-assign Public IP`
-
- :point_right: Not done yet, *scroll all the way down to bottom of the page*, and click on `Advanced Details` heading, which should drop down text-box called `User data`.
+  - c. Advanced Details / Boostrap Scripts
+ :point_right: Not done yet, *scroll all the way down to bottom of the page*, and un-collapse `Advanced Details` tab, which should drop down text-box called `User data`.
  
 ![](https://i.imgur.com/7O4LDL3.png)
 
-Copy paste below commands 
+Copy paste below commands into `User data` text-box.
 
 ```bash
 #!/bin/bash
@@ -122,4 +122,6 @@ sudo apt-get install ufw -y
 sudo ufw allow ssh
 sudo apt autoremove -y
 ```
+This will run the installations we need prior to SSH'ng to EC2 instance.
+
 

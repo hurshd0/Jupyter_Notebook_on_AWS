@@ -87,4 +87,13 @@ Since, we would be working with `Linux`, Ubuntu is my preference for installing 
 
 > Make sure the radio-button is selected to `64-bit (x86)`
 
-- Step 3. 
+- Step 2. Choose an Instance Type
+
+Leave everything here default (as is), and click on the button highlighted in the red box below:
+
+![](https://i.imgur.com/3mOWanT.png)
+
+> Leave the selection to default `t2.micro` as it is `free-tier`, unless you have preference. For more information on pricing check out this link: 
+https://aws.amazon.com/ec2/pricing/on-demand/
+
+

@@ -205,7 +205,7 @@ For:
          -  `<your_ec2_ip>`
          -  `<your_private_key>.pem`
     - Step 3. Navigate to your SSH key folder and type following commands to SSH into EC2
-      ```terminal
+      ```bash
       $ cd path/to/my/ssh-key-folder
       $ chmod 400 <your_private_key>.pem
       $ ssh ubuntu@<your_ec2_ip> -i <your_private_key>.pem
@@ -219,7 +219,7 @@ For:
 
 2. Verify the installs
 
-```console
+```bash
 $ sudo apt-get update -y
 ```
 

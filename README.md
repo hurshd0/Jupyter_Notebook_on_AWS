@@ -93,7 +93,18 @@ Leave everything here default (as is), and click on the button highlighted in th
 
 ![](https://i.imgur.com/3mOWanT.png)
 
-> Leave the selection to default `t2.micro` as it is `free-tier`, unless you have preference. For more information on pricing check out this link: 
+> Leave the selection to default `t2.micro` as it is `free-tier`, and since we would just be installing packages and configuring the instance we don't need a powerful server yet. For more information on pricing check out this link: 
 https://aws.amazon.com/ec2/pricing/on-demand/
 
+- Step 3: Configure Instance Details
+
+> Play close attention to highlted red boxes in image below, you should match those settings.
+
+![](https://i.imgur.com/2oP65hC.png)
+
+**Settings that needs to be changed:**
+
+  - a. Under `Network` drop-down box, select our `Jupyter VPC`
+  - b. Enable `Auto-assign Public IP`
+ 
 

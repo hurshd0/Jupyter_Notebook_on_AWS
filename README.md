@@ -111,7 +111,7 @@ https://aws.amazon.com/ec2/pricing/on-demand/
  
 ![](https://i.imgur.com/7O4LDL3.png)
 
-Copy paste below commands into `User data` text-box.
+:point_right: Copy paste below commands into `User data` text-box.
 
 ```bash
 #!/bin/bash
@@ -122,6 +122,23 @@ sudo apt-get install ufw -y
 sudo ufw allow ssh
 sudo apt autoremove -y
 ```
-This will run the installations we need prior to SSH'ng to EC2 instance.
+> This will run the installations we need prior to SSH'ng to EC2 instance.
+
+:point_right: Click, `Next: Add Storage` button
+
+- Step 4. Add Storage *(Optional)*
+
+**Optional Settings you can change:**
+
+- Update Size column from 8 GB to 30 GB of SSD, leave everything else to defaults.
+
+> Free tier eligible customers can get up to 30 GB of SSD storage, so what are you waiting for.
+
+- Step 5. Add Tags *(Optional)* 
+
+- I prefer organizing multiple instances with proper name tag, so let's add Key, Value tags like below:
+
+**Key:** `Name`
+**Value:** `Jupyter EC2 Server`
 
 

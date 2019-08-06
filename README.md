@@ -142,8 +142,8 @@ sudo apt autoremove -y
 
 - I prefer organizing multiple instances with proper name tag, so let's add Key, Value tags like below:
 
-**Key:** `Name`
-**Value:** `Jupyter EC2 Server`
+  - **Key:** `Name`
+  - **Value:** `Jupyter EC2 Server`
 
 ![](https://i.imgur.com/1OcCZgp.png)
 

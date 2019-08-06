@@ -204,7 +204,11 @@ For:
        - Denotes: 
          -  `<your_ec2_ip>`
          -  `<your_private_key>.pem`
-    
+    - Step 3. Navigate to your SSH key folder and type following commands to SSH into EC2
+      ```terminal
+      cd path/to/my/ssh-key-folder
+      chmod 400 
+      ```
     
 	
   

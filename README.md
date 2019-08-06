@@ -50,13 +50,13 @@ It should take you to something like this:
 
 3. Easiest way from here on is clicking on `Launch VPC Wizard` button, that will take you to:
 
-Step 1: Selecting a VPC Configuration, where you would click on the blue `Select` button, since we only need a single EC2 instance that is publicly accessible.
+- Step 1: Selecting a VPC Configuration, where you would click on the blue `Select` button, since we only need a single EC2 instance that is publicly accessible.
 
 ![](https://i.imgur.com/hsVm5Tw.png)
 
 > Selecting it, would create a Public Subnet where instances can have inbound connection from the outside world which will allow us to SSH into the servers and access website using HTTP/HTTPS protocols, along with outbound internet access needed to update and download repository/packages for us.
 
-Step 2: VPC with a Single Public Subnet
+- Step 2: VPC with a Single Public Subnet
 
 > Everything should be left default values, don't change anything expect giving it a VPC name, `Jupyter VPC`.
 
@@ -67,7 +67,7 @@ After naming the `VPC`, click on `Create VPC` button. After it sucessfully creat
 ![](https://i.imgur.com/VtxX8PU.png)
 
 
-Step 3: Click `Ok` and navigate back to **AWS Management Console**.
+- Step 3: Click `Ok` and navigate back to **AWS Management Console**.
 
 ---
 
@@ -79,7 +79,7 @@ Step 3: Click `Ok` and navigate back to **AWS Management Console**.
 
 2. Again the easiest way is to click on the big blue button, `Launch Instance`,
 
-Step 1. Choose an Amazon Machine Image (AMI)
+- Step 1. Choose an Amazon Machine Image (AMI)
 
 Since, we would be working with `Linux`, Ubuntu is my preference for installing necessary packages and Anaconda distributions.
 
@@ -87,4 +87,4 @@ Since, we would be working with `Linux`, Ubuntu is my preference for installing 
 
 > Make sure the radio-button is selected to `64-bit (x86)`
 
-
+- Step 3. 

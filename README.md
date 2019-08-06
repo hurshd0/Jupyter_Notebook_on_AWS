@@ -168,5 +168,17 @@ We will be creating a **new** security group, so make sure you follow below sett
  
  :point_right: Click `Review and Launch` button
  
- 
+- Step 7: Review Instance Launch
+
+:point_right: Click `Launch` button after you have verified the settings are correct, and matches based on steps we took.
+
+- Step 8: Create a new Key Pair or Select an existing Key Pair
+
+:rotating_light: :warning: **PAY ATTENTION TO THIS STEP** :warning: :rotating_light:
+
+Unless this is not your first time, you will be prompted to create a new **Key Pair**.
+
+  - Create a new key pair and make sure you name it `[name]-[region]-kp`, example, `jupyterec2-ohio-kp`, some thing like that.
+  - :warning: **Download Key Pair, and Store in non-shared folder/drive** :warning:, don't loose it.
+  
 

@@ -181,4 +181,11 @@ Unless this is not your first time, you will be prompted to create a new **Key P
   - Create a new key pair and make sure you name it `[name]-[region]-kp`, example, `jupyterec2-ohio-kp`, some thing like that.
   - :warning: **Download Key Pair, and Store in non-shared folder/drive** :warning:, don't loose it.
   
+- Step 9. Wait
+
+Once, you have sucessfully launched the EC2 instance you should see something like this.
+
+:point_right: Select, `View Instances` button
+
+## IV. Provision the Jupyter Server
 

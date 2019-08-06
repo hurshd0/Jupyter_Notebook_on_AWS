@@ -12,13 +12,22 @@ Simple Step-by-Step Guide to make portable Jupyter Notebook server that is acces
 
 2. If on Windows, install <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/PuTTY_icon_128px.png" width=32 height=32/></a>
 
+---
+
+## Register for AWS
+
 1. Start with registering for AWS account, if you have already registered, sign-in.
 
 You should now be on **AWS Management Console**, as of now it should look like this:
 
 ![](https://i.imgur.com/PGQ7uJk.png)
+## Create VPC
 
-2. Now, in the search bar search for, `
+Goal here is to create a safe space to launch our Jupyter Notebook Server, to do so, we will create a our Virtual Private Cloud (VPC) where we will launch the EC2 instance (i.e. Virtual Machine).
+
+Since, there is no cost for creating VPCs, you can create each for your project or deploying application.
+
+1. Before we start note your **AWS Region** in top-right, mine is `Ohio`, yours could be different,  
 
 ![](
 

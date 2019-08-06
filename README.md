@@ -224,6 +224,14 @@ For:
 $ sudo apt-get upgrade -y
 ```
 
-- Step 2. Run following commands to isntall **Anaconda**
+- Step 2. Follow the tutoral link below to install **Anaconda** on Ubuntu
+
+https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart
+
+For more information on Anaconda Environments:
+
+[A Guide to Conda Environments](https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533)
 
 
+
+- Step 3. 

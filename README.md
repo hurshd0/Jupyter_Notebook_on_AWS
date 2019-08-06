@@ -134,11 +134,23 @@ sudo apt autoremove -y
 
 > Free tier eligible customers can get up to 30 GB of SSD storage, so what are you waiting for.
 
+![](https://i.imgur.com/HwMVyiB.png)
+
+:point_right: Click, `Next: Add Tags` button
+
 - Step 5. Add Tags *(Optional)* 
 
 - I prefer organizing multiple instances with proper name tag, so let's add Key, Value tags like below:
 
 **Key:** `Name`
 **Value:** `Jupyter EC2 Server`
+
+![](https://i.imgur.com/1OcCZgp.png)
+
+:point_right: Click, `Next: Configure Security Group` button
+
+- Step 6: Configure Security Group
+
+:rotating_light: :warning: ** PAY ATTENTION TO THIS STEP ** :warning: :rotating_light:
 
 

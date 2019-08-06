@@ -250,6 +250,27 @@ do, `ls -l` to locate:
 
 Full path is: `/home/ubuntu/.jupyter/jupyter_notebook_config.py`
 
+- Step 4. Generate Password to Secure Jupyter Notebook
+
+Since we will be accessing our jupyter notebook environment remotely, we need to password protect it from unauthorized access.
+
+:star: Running the following command will generate an encrypted string, which make sure to save it.
+
+`ipython -c "from notebook.auth import passwd; passwd()"`
+
+Will give output like this:
+```bash
+Out[1]: 'sha1:6f9dfc6a43be:26332e572903d30b6a490ff2ff0c36ca26649f39'
+```
+
+
+
+
 Open it using, `nano` editor,
+
+`nano jupyter_notebook_config.py`
+
+Add following lines of code underneath the `# Configuration file for jupyter-notebook`.
+
 
 

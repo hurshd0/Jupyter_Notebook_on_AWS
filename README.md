@@ -27,6 +27,8 @@ Goal here is to create a safe space to launch our Jupyter Notebook Server, to do
 
 Our AWS Architecture should look something like this:
 
+![](AWS_Jupyter_Server.png)
+
 
 
 Since, there is no cost for creating VPCs, you can create each for your project or deploying application.
@@ -50,7 +52,3 @@ Step 1: Selecting a VPC Configuration, where you would click on the blue `Select
 ![](https://i.imgur.com/hsVm5Tw.png)
 
 Selecting it, would create a Public Subnet where instances can have inbound connection from the outside world.
-
-
-
-

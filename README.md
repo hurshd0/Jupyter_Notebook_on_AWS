@@ -207,7 +207,8 @@ For:
     - Step 3. Navigate to your SSH key folder and type following commands to SSH into EC2
       ```terminal
       cd path/to/my/ssh-key-folder
-      chmod 400 
+      chmod 400 <your_private_key>.pem
+      ssh ubuntu@<your_ec2_ip> -i <your_private_key>.pem
       ```
     
 	

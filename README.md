@@ -274,6 +274,9 @@ Open it using, `nano` editor,
 
 Add following lines of code underneath the `# Configuration file for jupyter-notebook`.
 
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get install certbot -y
+
 https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication
 
 https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-16-04

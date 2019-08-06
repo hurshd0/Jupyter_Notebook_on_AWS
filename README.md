@@ -187,5 +187,33 @@ Once, you have sucessfully launched the EC2 instance you should see something li
 
 :point_right: Select, `View Instances` button
 
+3. Once your are on **EC2 Dashboard** wait till Instance State is indicated with green light :green_heart:.
+
 ## IV. Provision the Jupyter Server
+
+1. SSH into EC2
+
+SSH means "secure shell", where you can remotely connect your server and type commands into.
+
+For: 
+  - Mac / Linux users: use Terminal
+	
+    :point_right: Locate your ec2 ip in `Description` tab under `Public DNS(IPv4)`.
+    ![](https://i.imgur.com/e2ox50X.png)
+    
+    :point_right: 
+      - Denotes: 
+        -  <your_ec2_ip>
+        -  <your_private_key>.pem
+    
+    
+	
+  
+  - Windows users: use PowerShell or PuTTy
+  
+  :warning: For Windows users, before you connect your private key that you created needs to be converted to PuTTY format using PuTTY gen.
+
+  Follow the **Prerequisites** part of this guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+
+
 

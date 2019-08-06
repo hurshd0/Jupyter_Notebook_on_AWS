@@ -262,9 +262,11 @@ Will give output like this:
 ```bash
 Out[1]: 'sha1:6f9dfc6a43be:26332e572903d30b6a490ff2ff0c36ca26649f39'
 ```
+ :point_up_2: Copy paste and save it somewhere safe.
 
+- Step 5. Configuring Jupyter Notebook Configuration
 
-
+We will add the hashed password generated above, in addition to 
 
 Open it using, `nano` editor,
 

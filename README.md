@@ -248,3 +248,8 @@ do, `ls -l` to locate:
 
 `jupyter_notebook_config.py`
 
+Full path is: `/home/ubuntu/.jupyter/jupyter_notebook_config.py`
+
+Open it using, `nano` editor,
+
+

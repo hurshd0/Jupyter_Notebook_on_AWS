@@ -263,10 +263,23 @@ Will give output like this:
 Out[1]: 'sha1:6f9dfc6a43be:26332e572903d30b6a490ff2ff0c36ca26649f39'
 ```
  :point_up_2: Copy paste and save it somewhere safe.
+ 
+ - Step 5. Generate SSL Certificates
+   - Below commands will navigate to home folder, make hidden `certs` directory, and generate
+     SSL certificates that are required to secure the Jupyter Notebook.
+      ``
+      cd ~
+      mkdir .certs
+      cd .certs
+      openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+      pwd
+      ``
+      If you get lost read docs here: 
+https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication
 
-- Step 5. Configuring Jupyter Notebook Configuration
+- Step 6. Configuring Jupyter Notebook Configuration
 
-We will add the hashed password generated above, in addition to 
+We will add the hashed password generated above, in addition to certificates.
 
 Open it using, `nano` editor,
 
@@ -274,16 +287,76 @@ Open it using, `nano` editor,
 
 Add following lines of code underneath the `# Configuration file for jupyter-notebook`.
 
-```console
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get install certbot -y
+```
+# Set options for certfile, ip, password, and toggle off
+# browser auto-opening
+c.NotebookApp.certfile = u'/absolute/path/to/your/certificate/mycert.pem'
+c.NotebookApp.keyfile = u'/absolute/path/to/your/certificate/mykey.key'
+
+# Set ip to '*' to bind on all interfaces (ips) for the public server
+c.NotebookApp.ip = '*'
+
+# Generated hashed password
+c.NotebookApp.password = u'sha1:<<PASTE THE HASH HERE>>'
+
+# Turns off auto-opening of browser
+c.NotebookApp.open_browser = False
+
+# It is a good idea to set a known, fixed port for server access
+c.NotebookApp.port = 8888
+```
+Save it with `Ctrl + O`, `Y` 
+
+To further secure we will enable `UFW` firewall in ubuntu:
+
+```
 sudo ufw allow 80
 sudo ufw allow 443
-sudo ufw allow 9999
+sudo ufw allow 8888
 ```
+   - Step 7.
+   Finally run the notebook with `jupyter notebook&`
+   
+   - To auto start Jupyter Notebook you would have to use `Systemctl` config like this:
+        ```console
+	[Unit]
+	Description=Jupyter Notebook
 
-https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication
+	[Service]
+	Type=simple
+	PIDFile=/run/jupyter.pid
+	ExecStart=/home/ubuntu/anaconda3/bin/jupyter-notebook --config=/home/ubuntu/.jupyter/jupyter_notebook_config.py
+	User=turtle
+	Group=turtle
+	WorkingDirectory=/home/ubuntu
+	Restart=always
+	RestartSec=10
+	#KillMode=mixed
 
-https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-16-04
+	[Install]
+	WantedBy=multi-user.target
+        ```
+      
+- [OPTONAL] ;) If you want to use your domain name i.e. `example.com:8888` to access notebook:
 
-https://janakiev.com/blog/jupyter-notebook-server/
+  Follow instructions here: 
+
+   https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-16-04
+
+   https://janakiev.com/blog/jupyter-notebook-server/
+
+   ```console
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt-get install certbot -y
+    ```
+    
+  
+    
+    
+
+
+
+
+
+
+

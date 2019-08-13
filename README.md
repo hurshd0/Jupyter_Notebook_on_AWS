@@ -318,7 +318,7 @@ sudo ufw allow 8888
    Finally run the notebook with `jupyter notebook&`
    
    - To auto start Jupyter Notebook you would have to use `Systemctl` config like this:
-        ```console
+```console
 	[Unit]
 	Description=Jupyter Notebook
 
@@ -335,8 +335,31 @@ sudo ufw allow 8888
 
 	[Install]
 	WantedBy=multi-user.target
-        ```
-      
+```
+
+## INSTALL VS CODE, WINDOWS 10
+
+[Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
+
+![](https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png)
+
+Follow Remote Connection Instruction here if you get lost: https://code.visualstudio.com/docs/remote/ssh
+
+#### 1. Enable SSH following link here if your `ssh` command is not working in PowerShell [Installation of OpenSSH For Windows Server 2019 and Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
+
+#### 2. 
+On Windows, in your [HOME] folder, make a `.ssh` directory and add your `pem` file than convert it to `.openssh` using [`PuTTY`](https://code.visualstudio.com/docs/remote/troubleshooting#_reusing-a-key-generated-in-puttygen) along with `config` file which 
+should look like this:
+```
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host ec2.long.dns.name.com
+    HostName ec2.long.dns.name.com
+    User ubntu
+    IdentityFile C:\Users\$HOME\.ssh\ec2-server-ssh-key.openssh
+```
+
+IF YOU GET LOST: https://code.visualstudio.com/docs/remote/ssh
+
 - [OPTONAL] ;) If you want to use your domain name i.e. `example.com:8888` to access notebook:
 
   Follow instructions here: 

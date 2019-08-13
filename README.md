@@ -267,13 +267,14 @@ Out[1]: 'sha1:6f9dfc6a43be:26332e572903d30b6a490ff2ff0c36ca26649f39'
  - Step 5. Generate SSL Certificates
    - Below commands will navigate to home folder, make hidden `certs` directory, and generate
      SSL certificates that are required to secure the Jupyter Notebook.
-      ``
-      cd ~
-      mkdir .certs
-      cd .certs
-      openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
-      pwd
-      ``
+      ```
+      cd ~  
+      mkdir .certs  
+      cd .certs   
+      openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem   
+      pwd  
+      ```
+      **Note down the path to certs**
       If you get lost read docs here: 
 https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#using-ssl-for-encrypted-communication
 
@@ -314,8 +315,9 @@ sudo ufw allow 80
 sudo ufw allow 443
 sudo ufw allow 8888
 ```
-   - Step 7.
-   Finally run the notebook with `jupyter notebook&`
+> Finally run the notebook with `jupyter notebook&` and acess with really long DNS NAME: `ec2-public-ip4-domain-name:8888` to access the notebook
+     
+   - Step 7. To sweeten the deal, let's be lazy and **AutoStart the Notebook** everytime the instance boots up,   
    
    - To auto start Jupyter Notebook you would have to use `Systemctl` config like this:
 ```console
@@ -326,8 +328,8 @@ sudo ufw allow 8888
 	Type=simple
 	PIDFile=/run/jupyter.pid
 	ExecStart=/home/ubuntu/anaconda3/bin/jupyter-notebook --config=/home/ubuntu/.jupyter/jupyter_notebook_config.py
-	User=turtle
-	Group=turtle
+	User=ubuntu
+	Group=ubuntu
 	WorkingDirectory=/home/ubuntu
 	Restart=always
 	RestartSec=10
@@ -336,6 +338,17 @@ sudo ufw allow 8888
 	[Install]
 	WantedBy=multi-user.target
 ```
+
+> NOTE: you need a root access
+
+Once you have filled the paths and satisfied,
+
+- Navigate to `cd /etc/systemd/system`
+- Do `sudo nano jupyter.service` and copy paste above config
+- Save the confif from nano with `Ctrl + O`, than do,
+- Enable: `sudo systemctl enable jupyter.service`
+- Check Status: `systemctl status jupyter.service`
+- Go to `ec2-public-ip4-domain-name:8888` to access the notebook
 
 ## INSTALL VS CODE, WINDOWS 10
 
